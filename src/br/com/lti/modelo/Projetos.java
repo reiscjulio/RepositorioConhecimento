@@ -1,10 +1,14 @@
 package br.com.lti.modelo;
 
 import java.time.LocalDate;
+import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Projetos {
@@ -14,6 +18,9 @@ public class Projetos {
 	@GeneratedValue	
 	private int id;
 
+	@OneToOne
+	private Responsavel responsavel;	
+	
 	private String nome;
 	private LocalDate data;
 	private String titulo;

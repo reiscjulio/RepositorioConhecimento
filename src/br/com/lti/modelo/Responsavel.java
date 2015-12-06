@@ -13,12 +13,6 @@ public class Responsavel {
 	@Id
 	@GeneratedValue	
 	private int id;
-
-	@OneToMany
-	private Set<Licoes> licoes;
-	
-	@OneToMany
-	private Set<Relatorio> relatorios;
 	
 	private String nome;
 	private int matricula;
